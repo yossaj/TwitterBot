@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import config 
 
 class TwitterBot:
     def __init__(self,username,password):
@@ -21,5 +22,5 @@ class TwitterBot:
         password.send_keys(Keys.RETURN)
 
 
-doggo = TwitterBot('Name', 'password')
+doggo = TwitterBot(config.username, config.password)
 doggo.login()
